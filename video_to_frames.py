@@ -1,7 +1,7 @@
 import cv2
 import os
 
-cam = cv2.VideoCapture(r"C:\Users\Fabian\Desktop\Video to ascii project\yt1s.com - van darkholme intro.mp4")
+cam = cv2.VideoCapture(r"C:\Users\Ashish Kumar\Desktop\Video to ascii project\yt1s.com - van darkholme intro.mp4")
 try:
     if not os.path.exists('data'):
         os.makedirs('data')
