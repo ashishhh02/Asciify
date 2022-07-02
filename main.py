@@ -79,7 +79,7 @@ def convert_to_video():
             img = cv2.imread(filename)
         except: 
             print(filename, 'is not a valid pathname')
-        out = cv2.VideoWriter('C:/Users/Fabian/Desktop/Video to ascii project/output/project.avi',cv2.VideoWriter_fourcc(*'mp4v'), 30, (640,480))
+        out = cv2.VideoWriter('C:/Users/Ashish Kumar/Desktop/Video to ascii project/output/project.avi',cv2.VideoWriter_fourcc(*'mp4v'), 30, (640,480))
         out.write(img)
         print('frame {} done'.format(i))
         i += 1
@@ -87,7 +87,7 @@ def convert_to_video():
 
 def main(new_width = 100):
     i = 0 
-    path = 'C:/Users/Fabian/Desktop/Video to ascii project/data/*.jpg'
+    path = 'C:/Users/Ashish Kumar/Desktop/Video to ascii project/data/*.jpg'
     for filename in sorted(glob.glob(path), key = os.path.getmtime):
         try:
             image = PIL.Image.open(filename)
@@ -99,7 +99,7 @@ def main(new_width = 100):
         pixel_count = len(new_image_data)
         ascii_image = '\n'.join(new_image_data[i:(i+new_width)] for i in range(0, pixel_count, new_width))
 
-        out = text_image(ascii_image).save('C:/Users/Fabian/Desktop/Video to ascii project/test txt to jpg/frame{}.jpg'.format(i))
+        out = text_image(ascii_image).save('C:/Users/Ashish Kumar/Desktop/Video to ascii project/test txt to jpg/frame{}.jpg'.format(i))
         print('frame {} converted to ascii jpg'.format(i))
         i += 1
     #convert_to_video()
